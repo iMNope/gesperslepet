@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katalog Gesper Slepet | Motif Wayang, Batik, Flora, Geometris</title>
+<meta name="description" content="Katalog 8 gesper slepet kuningan & tembaga: wayang Arjuna, parang kusuma, lotus Majapahit, kawung. Filter motif & ukuran, order via WhatsApp.">
+<meta property="og:title" content="Katalog Gesper Slepet">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{copper:'#B87333',copperdark:'#8C5A2B',gold:'#C9A227',goldlight:'#E8C86A',cream:'#FAF6EF',charcoal:'#1C1917'}}}}}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans antialiased bg-cream text-charcoal">
+<div class="bg-charcoal text-cream/90 text-xs py-2 px-4 text-center"><span data-i18n="header.tagline">Warisan Ukir Jawa Sejak 1987</span></div>
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-[#E7DCC3]">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <a href="index.html" class="flex items-center gap-3"><div class="w-11 h-11 rounded-full gold-gradient flex items-center justify-center font-serif text-2xl font-black">GS</div><div class="leading-tight"><p class="font-serif font-black text-xl">Gesper <span class="gold-text">Slepet</span></p><p class="text-[11px] tracking-[.2em] uppercase text-stone-500">Kotagede • Yogyakarta</p></div></a>
+    <nav class="hidden md:flex items-center gap-7 font-semibold text-[15px]">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Beranda</a>
+      <a href="tentang-kami.html" class="nav-link" data-i18n="nav.about">Tentang Kami</a>
+      <a href="katalog.html" class="nav-link active" data-i18n="nav.catalog">Katalog</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="flex border border-[#C9A227] rounded-full overflow-hidden text-sm font-bold"><button class="lang-btn px-3 py-1.5" data-lang="id">ID</button><button class="lang-btn px-3 py-1.5" data-lang="en">EN</button></div>
+      <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="hidden sm:inline-block btn-gold rounded-full px-5 py-2 text-sm" data-i18n="nav.order">Pesan Sekarang</a>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-[#E7DCC3]" aria-label="Menu">☰</button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-[#E7DCC3] bg-cream px-4 py-3 flex flex-col gap-3 font-semibold">
+    <a href="index.html" data-i18n="nav.home">Beranda</a><a href="tentang-kami.html" data-i18n="nav.about">Tentang Kami</a><a href="katalog.html" data-i18n="nav.catalog">Katalog</a>
+  </div>
+</header>
+
+<section class="hero-pattern text-cream">
+  <div class="max-w-4xl mx-auto px-4 py-14 md:py-16 text-center">
+    <p class="inline-block text-xs font-bold tracking-[.25em] uppercase border border-gold/50 text-goldlight rounded-full px-4 py-1.5" data-i18n="cat.badge">Katalog Produk</p>
+    <h1 class="font-serif text-3xl md:text-5xl font-black mt-4" data-i18n="cat.title">Pilih Pusaka Sesuai Gayamu</h1>
+    <p class="text-cream/75 mt-3" data-i18n="cat.sub">8 motif pakem.</p>
+    <input id="searchInput" oninput="setCatalogQuery(this.value)" data-i18n-ph="cat.searchPh" placeholder="Cari motif…" class="mt-6 w-full max-w-md mx-auto block rounded-full px-5 py-3 text-charcoal text-sm outline-none focus:ring-2 ring-gold">
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="bg-white border border-[#E7DCC3] rounded-2xl p-4 md:p-5 flex flex-col lg:flex-row gap-4 lg:items-center">
+    <div class="flex flex-wrap gap-2 items-center">
+      <span class="text-xs font-bold uppercase tracking-wider text-stone-500 mr-1">Motif:</span>
+      <button data-fmotif="all" onclick="setCatalogFilter('motif','all')">Semua</button>
+      <button data-fmotif="wayang" onclick="setCatalogFilter('motif','wayang')">Wayang</button>
+      <button data-fmotif="batik" onclick="setCatalogFilter('motif','batik')">Batik</button>
+      <button data-fmotif="flora" onclick="setCatalogFilter('motif','flora')">Flora</button>
+      <button data-fmotif="geometris" onclick="setCatalogFilter('motif','geometris')">Geometris</button>
+    </div>
+    <div class="flex flex-wrap gap-2 items-center lg:ml-auto">
+      <span class="text-xs font-bold uppercase tracking-wider text-stone-500 mr-1">Size:</span>
+      <button data-fsize="all" onclick="setCatalogFilter('size','all')">All</button>
+      <button data-fsize="S" onclick="setCatalogFilter('size','S')">S</button>
+      <button data-fsize="M" onclick="setCatalogFilter('size','M')">M</button>
+      <button data-fsize="L" onclick="setCatalogFilter('size','L')">L</button>
+      <span id="resultCount" class="text-xs font-bold text-copperdark ml-2">8 produk</span>
+    </div>
+  </div>
+  <div id="catalogGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-8"></div>
+
+  <div class="mt-12 hero-pattern rounded-3xl p-8 md:p-10 text-center text-cream">
+    <h2 class="font-serif text-2xl md:text-3xl font-black" data-i18n="cat.customTitle">Tidak menemukan yang pas?</h2>
+    <p class="text-cream/70 mt-2 text-sm" data-i18n="cat.customSub">Kirim sketsa — gratis desain.</p>
+    <a href="https://wa.me/6281234567890?text=Halo!%20Saya%20mau%20custom%20gesper%20slepet." target="_blank" rel="noopener" class="inline-block mt-5 btn-gold rounded-xl px-8 py-3" data-i18n="cta.wa">Chat WhatsApp</a>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-cream/80 mt-4">
+  <div class="max-w-7xl mx-auto px-4 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center font-serif font-black text-charcoal">GS</div><p class="font-serif font-black text-xl text-cream">Gesper Slepet</p></div><p class="text-sm mt-4" data-i18n="footer.desc">Produsen gesper.</p></div>
+    <div><p class="font-bold text-cream mb-4" data-i18n="footer.navTitle">Navigasi</p><ul class="space-y-2 text-sm"><li><a href="index.html" data-i18n="nav.home">Beranda</a></li><li><a href="tentang-kami.html" data-i18n="nav.about">Tentang Kami</a></li><li><a href="katalog.html" data-i18n="nav.catalog">Katalog</a></li></ul></div>
+    <div><p class="font-bold text-cream mb-4">Marketplace</p><ul class="space-y-2 text-sm"><li>Tokopedia: GesperSlepet</li><li>Shopee: gesperslepet.id</li><li>TikTok Shop: @gesperslepet</li></ul></div>
+    <div><p class="font-bold text-cream mb-4" data-i18n="footer.contactTitle">Hubungi Kami</p><p class="text-sm" data-i18n="footer.address">Jl. Kemasan No. 27</p><p class="text-sm mt-2">WA: 0812-3456-7890</p></div>
+  </div>
+  <div class="border-t border-white/10 py-5 text-center text-xs text-cream/50 px-4" data-i18n="footer.rights">© 2026 Gesper Slepet.</div>
+</footer>
+<a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="fixed bottom-5 right-5 w-14 h-14 rounded-full bg-[#25D366] shadow-2xl flex items-center justify-center text-2xl">✆</a>
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+:root{
+  --copper:#B87333;
+  --copper-dark:#8C5A2B;
+  --gold:#C9A227;
+  --gold-light:#E8C86A;
+  --cream:#FAF6EF;
+  --cream-dark:#F0E6D2;
+  --charcoal:#1C1917;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--charcoal)}
+.font-serif-display{font-family:'Playfair Display','Merriweather',serif}
+.batiktri{background-image:radial-gradient(circle at 1px 1px, rgba(201,162,39,.18) 1px, transparent 0);background-size:22px 22px}
+.gold-gradient{background:linear-gradient(135deg,#8C5A2B 0%,#B87333 30%,#E8C86A 50%,#C9A227 60%,#8C5A2B 100%)}
+.gold-text{background:linear-gradient(120deg,#8C5A2B,#C9A227 40%,#F3D27A 50%,#C9A227 60%,#8C5A2B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn-gold{background:linear-gradient(135deg,#B87333,#C9A227);color:#1C1917;font-weight:700;transition:.25s}
+.btn-gold:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 12px 24px -8px rgba(184,115,51,.55)}
+.btn-outline{border:1.5px solid #C9A227;color:#5b4210;transition:.25s}
+.btn-outline:hover{background:#1C1917;color:#F0E6D2;border-color:#1C1917}
+.card-hover{transition:.3s}
+.card-hover:hover{transform:translateY(-6px);box-shadow:0 24px 48px -16px rgba(28,25,23,.28)}
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:#C9A227;transition:.25s}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.lang-btn{transition:.2s}
+.lang-btn.active{background:#1C1917;color:#FAF6EF}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.hero-pattern{background:
+  radial-gradient(ellipse 60% 50% at 70% 30%, rgba(201,162,39,.22), transparent 70%),
+  radial-gradient(ellipse 50% 60% at 20% 80%, rgba(184,115,51,.18), transparent 70%),
+  linear-gradient(180deg,#1C1917 0%,#292524 60%,#44403C 100%)}
+.ukir-border{border:1px solid rgba(201,162,39,.4);outline:1px solid rgba(201,162,39,.18);outline-offset:6px}
+.step-line::before{content:'';position:absolute;left:27px;top:60px;bottom:-20px;width:2px;background:repeating-linear-gradient(180deg,#C9A227 0 8px,transparent 8px 14px)}
+.step-item:last-child .step-line::before{display:none}
+.gallery-img{aspect-ratio:1/1;object-fit:cover}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{scrollbar-width:none}

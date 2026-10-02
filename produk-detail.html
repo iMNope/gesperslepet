@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Produk — Gesper Slepet</title>
+<meta name="description" content="Detail spesifikasi gesper slepet: bahan kuningan/tembaga, dimensi, berat, finishing. Order via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{copper:'#B87333',copperdark:'#8C5A2B',gold:'#C9A227',goldlight:'#E8C86A',cream:'#FAF6EF',charcoal:'#1C1917'}}}}}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-sans bg-cream text-charcoal antialiased">
+<div class="bg-charcoal text-cream/90 text-xs py-2 px-4 text-center"><span data-i18n="header.tagline">Warisan Ukir Jawa Sejak 1987</span></div>
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-[#E7DCC3]">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <a href="index.html" class="flex items-center gap-3"><div class="w-11 h-11 rounded-full gold-gradient flex items-center justify-center font-serif text-2xl font-black">GS</div><div class="leading-tight"><p class="font-serif font-black text-xl">Gesper <span class="gold-text">Slepet</span></p><p class="text-[11px] tracking-[.2em] uppercase text-stone-500">Kotagede • Yogyakarta</p></div></a>
+    <nav class="hidden md:flex items-center gap-7 font-semibold text-[15px]">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Beranda</a>
+      <a href="tentang-kami.html" class="nav-link" data-i18n="nav.about">Tentang Kami</a>
+      <a href="katalog.html" class="nav-link active" data-i18n="nav.catalog">Katalog</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="flex border border-[#C9A227] rounded-full overflow-hidden text-sm font-bold"><button class="lang-btn px-3 py-1.5" data-lang="id">ID</button><button class="lang-btn px-3 py-1.5" data-lang="en">EN</button></div>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-[#E7DCC3]">☰</button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-[#E7DCC3] bg-cream px-4 py-3 flex flex-col gap-3 font-semibold">
+    <a href="index.html" data-i18n="nav.home">Beranda</a><a href="tentang-kami.html" data-i18n="nav.about">Tentang Kami</a><a href="katalog.html" data-i18n="nav.catalog">Katalog</a>
+  </div>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-10" id="detailWrap"></main>
+<footer class="bg-charcoal text-cream/80">
+  <div class="max-w-7xl mx-auto px-4 py-10 text-center text-sm"><a href="katalog.html" class="text-goldlight font-bold" data-i18n="detail.back">← Kembali ke Katalog</a><p class="text-cream/50 text-xs mt-3" data-i18n="footer.rights">© 2026 Gesper Slepet.</p></div>
+</footer>
+<script src="assets/js/translations.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
