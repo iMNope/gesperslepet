@@ -5,7 +5,7 @@ const PRODUCTS = [
     id: "wayang-arjuna",
     sku: "GS-01",
     motif: "wayang", size: "L", featured: true,
-    price: 385000,
+    price: 700000,
     name: { id: "Gesper Wayang Arjuna", en: "Arjuna Wayang Buckle" },
     short: { id: "Ksatria Arjuna dengan panah & mahkota ukir dalam kuningan tebal.", en: "Knight Arjuna with bow & carved crown in thick brass." },
     desc: {
