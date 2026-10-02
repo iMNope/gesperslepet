@@ -17,7 +17,7 @@ const PRODUCTS = [
     weight: "118 g",
     finishing: { id: "Antik emas + anti-tarnish", en: "Antique gold + anti-tarnish" },
     stock: 42,
-    img: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80",
+    img: "assets/images/wayang-arjuna.jpg",
     badge: { id: "Terlaris", en: "Best Seller" }
   },
   {
